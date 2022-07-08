@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #434750;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 90vh;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+    margin: 40px;
+    border-radius: 4px;
+}
+
+.box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.box:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+    border-radius: 4px;
+}
+
+.box:nth-child(1):before,
+.box:nth-child(1)::after {
+    background: linear-gradient(235deg, #89ff00,
+     #010615, #00bcd4);
+}
+
+.box:nth-child(2):before,
+.box:nth-child(2)::after {
+    background: linear-gradient(235deg, #ff005e,
+     #010615, #fbff00);
+}
+
+.box:nth-child(3):before,
+.box:nth-child(3)::after {
+    background: linear-gradient(235deg, #772aff,
+     #010615, #ee3000);
+}
+
+.box .glass {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,.1);
+    pointer-events: none;
+    border-radius: 4px;
+}
+
+.box .content {
+    padding: 20px;
+    color: #fff;
+}
+
+.buttom {
+    display: flex;
+    justify-content: right;
+    padding-right: 40px;
+}
+
+.buttom a {
+    display: block;
+    background: #060c21;
+    color: #fff;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.buttom a:hover {
+    letter-spacing: 0.2em;
+}
